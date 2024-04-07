@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeyReader</title>
+</head>
+<body>
+    
+    <script>
+        const bd = document.querySelector("body");
+        bd.addEventListener('keydown',(e)=>{
+            bd.innerHTML = `
+            <div class = "color">
+            <table>
+                <tr>
+                    <td>KeyPressed</td>
+                    <td>Keycode</td>
+                    <td>Code</td>
+                </tr>
+                <tr>
+                    <td>${e.key}</td>
+                    <td>${e.keyCode}</td>
+                    <td>${e.code}</td>
+                </tr>
+            </table>
+            </div>
+            `
+        })
+    </script>
+</body>
+</html>
